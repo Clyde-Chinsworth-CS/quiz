@@ -24,7 +24,7 @@ $(document).ready(function () {
         })
 
         $("#div1").slideDown("slow")
-        $("#slideIn").html(1 + "/5")
+        $("#slideIn").html(1 + "/6")
 
         $("#prev").show()
         $("#next").show()
@@ -69,16 +69,19 @@ $(document).ready(function () {
 
     // slideshow
 
-    $("#slideIn").html(slideNum + "/5")
+    $("#slideIn").html(slideNum + "/7")
 
     //previous
     $("#prev").click(function () {
         $("#div" + slideNum).slideUp("slow", function () {
             slideNum--
 
-    
+            if (slideNum < 1) {
+                slideNum = 1
+            }
+
             $("#div" + slideNum).slideDown("slow")
-            $("#slideIn").html(slideNum + "/5")
+            $("#slideIn").html(slideNum + "/7")
         })
     })
 
@@ -87,7 +90,7 @@ $(document).ready(function () {
         $("#div" + slideNum).slideUp("slow", function () {
             slideNum++
 
-            if (slideNum > 5) { // RESULTS SCREEN
+            if (slideNum > 7) { // RESULTS SCREEN
                 $("#prev").hide()
                 $("#next").hide()
 
@@ -106,7 +109,17 @@ $(document).ready(function () {
                 if (control5 == "AUSTRALIA") {
                     correct++
                 }
-                $("#score").html("You scored " + correct + "/5")
+                var num = $("#numIn").val()
+                if (num == 2) {
+                    correct++
+                }
+                var text = $("#textIn").val()
+                text = text.toLowerCase()
+                if (text == "sunrise") {
+                    correct++
+                } 
+                
+                $("#score").html("You scored " + correct + "/7")
 
                 if (correct == 0) {
                     $("#status").html("Maybe you should try harder.")
@@ -115,19 +128,23 @@ $(document).ready(function () {
                 } else if (correct == 2) {
                     $("#status").html("Subpar.")
                 } else if (correct == 3) {
-                    $("#status").html("You're getting there.")
+                    $("#status").html("Proud of yourself?")
                 } else if (correct == 4) {
-                    $("#status").html("80 percent is still good, yeah?")
+                    $("#status").html("Not a fail, at least.")
                 } else if (correct == 5) {
+                    $("#status").html("Pretty mediocre.")
+                } else if (correct == 6) {
+                    $("#status").html("No cigar.")
+                } else if (correct == 7) {
                     $("#status").html("Aren't you special.")
                 }
             }
 
             $("#div" + slideNum).slideDown("slow")
-            if (slideNum > 5) {
+            if (slideNum > 7) {
                 $("#slideIn").html("RESULTS")
             } else {
-                $("#slideIn").html(slideNum + "/5")
+                $("#slideIn").html(slideNum + "/7")
             }
 
         })

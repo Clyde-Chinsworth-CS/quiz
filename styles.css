@@ -1,19 +1,54 @@
-
 html {
     background-color: white;
     font-family: "Poiret One";
-   
 }
 
 label {
-    display:inline-block;
+    display: inline-block;
     width: 3em;
     text-align: center;
 }
 
+img {
+    display:block;
+    width:900px;
+    margin:auto;
+    
+}
+
+input {
+    display: inline-block;
+    align-items: center;
+    width: 750px;
+    margin-right:40px;
+    font-family: "Poiret One";
+    font-size: 18px;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    text-align: center;
+    
+}
+
+input:focus {
+    outline: none;
+}
+
+.style-1 input {
+    padding: 10px;
+    border: solid 1px #dcdcdc;
+    transition: box-shadow 0.3s, border 0.3s;
+}
+
+.style-1 input:focus,
+.style-1 input.focus {
+    border: solid 1px #36D9D1;
+    box-shadow: 0 0 5px 1px #36D9D1;
+}
+
 p {
     text-align: center;
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 body {
@@ -196,18 +231,17 @@ button:hover {
 .selected {
     opacity: 1;
     background-color: rgba(255, 255, 255, 0.9);
-    border: 5px none #36D9D1;
-    border-left-style: solid;
-    border-right-style: solid;
+    outline: 2px solid #36D9D1;
 }
-
 
 #div1,
 #div2,
 #div3,
 #div4,
-#div5, 
-#div6 {
+#div5,
+#div6,
+#div7,
+#div8 {
     display: none;
 }
 
@@ -215,4 +249,3 @@ button:hover {
     height: 450px;
     padding-top: 20px;
 }
-
