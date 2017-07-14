@@ -24,7 +24,7 @@ $(document).ready(function () {
         })
 
         $("#div1").slideDown("slow")
-        $("#slideIn").html(1 + "/6")
+        $("#slideIn").html(1 + "/7")
 
         $("#prev").show()
         $("#next").show()
