@@ -5,6 +5,12 @@ html {
    
 }
 
+label {
+    display:inline-block;
+    width: 3em;
+    text-align: center;
+}
+
 p {
     text-align: center;
     font-weight: bold; 
@@ -55,6 +61,12 @@ button {
     padding: 20px;
     margin: 0px 60px 0px 60px;
     font-size: 20px;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #36D9D1;
+    outline: 2px solid #36D9D1;
 }
 
 
@@ -189,11 +201,13 @@ button {
     border-right-style: solid;
 }
 
+
+#div1,
 #div2,
 #div3,
 #div4,
-#div5,
-#div6{
+#div5, 
+#div6 {
     display: none;
 }
 

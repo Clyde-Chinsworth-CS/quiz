@@ -6,46 +6,66 @@ var control1
 var control2
 var control3
 var control4
+var control5
 var correct = 0
 
 $(document).ready(function () {
 
-    var slideNum = 1
+    var slideNum = 0
+    $("#prev").hide()
+    $("#next").hide()
+    $("#slideIn").hide()
+
+    $("#go").click(function () {
+
+        $("#div0").slideUp("slow", function () {
+            slideNum = 1
+            console.log(slideNum)
+        })
+
+        $("#div1").slideDown("slow")
+        $("#slideIn").html(1 + "/5")
+
+        $("#prev").show()
+        $("#next").show()
+        $("#slideIn").show()
+
+    })
 
     // slide one selector
     $(".flow").click(function () {
         $(".flow").removeClass("selected")
         $(this).addClass("selected")
         control1 = $(this).text()
-    });
+    })
 
     // slide two selector
     $(".flow2").click(function () {
         $(".flow2").removeClass("selected")
         $(this).addClass("selected")
         control2 = $(this).text()
-    });
+    })
 
     // slide three selector
     $(".flow3").click(function () {
         $(".flow3").removeClass("selected")
         $(this).addClass("selected")
         control3 = $(this).text()
-    });
+    })
 
     // slide four selector
     $(".flow4").click(function () {
         $(".flow4").removeClass("selected")
         $(this).addClass("selected")
         control4 = $(this).text()
-    });
+    })
 
     // slide five selector
     $(".flow5").click(function () {
         $(".flow5").removeClass("selected")
         $(this).addClass("selected")
         control5 = $(this).text()
-    });
+    })
 
     // slideshow
 
@@ -56,10 +76,7 @@ $(document).ready(function () {
         $("#div" + slideNum).slideUp("slow", function () {
             slideNum--
 
-            if (slideNum < 1) {
-                slideNum = 1
-            }
-
+    
             $("#div" + slideNum).slideDown("slow")
             $("#slideIn").html(slideNum + "/5")
         })
@@ -69,10 +86,6 @@ $(document).ready(function () {
     $("#next").click(function () {
         $("#div" + slideNum).slideUp("slow", function () {
             slideNum++
-
-            if (slideNum > 6) {
-                slideNum = 1
-            }
 
             if (slideNum > 5) { // RESULTS SCREEN
                 $("#prev").hide()
