@@ -1,0 +1,204 @@
+
+html {
+    background-color: white;
+    font-family: "Poiret One";
+   
+}
+
+p {
+    text-align: center;
+    font-weight: bold; 
+}
+
+body {
+    background-color: white;
+    width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    background-color: #36D9D1;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.flow,
+.flow2,
+.flow3,
+.flow4,
+.flow5 {
+    width: 900px;
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    opacity: 0.5;
+    background-color: #36D9D1;
+}
+
+button {
+    background-color: #36D9D1;
+    color: white;
+    border: none;
+    text-align: center;
+    font-family: "Poiret One";
+    font-weight: bold;
+    padding: 20px;
+    margin: 0px 60px 0px 60px;
+    font-size: 20px;
+}
+
+
+/*slide one images*/
+
+#img1-1 {
+    background: url("data/cop.jpg");
+    background-size: cover;
+}
+
+#img1-2 {
+    background: url("data/shelter.jpg");
+    background-size: cover;
+}
+
+#img1-3 {
+    background: url("data/persona.jpg");
+    background-size: cover;
+}
+
+#img1-4 {
+    background: url("data/giant.jpg");
+    background-size: cover;
+}
+
+
+/*slide two images*/
+
+#img2-1 {
+    background: url("data/playstation.jpg");
+    background-size: cover;
+}
+
+#img2-2 {
+    background: url("data/genesis.jpg");
+    background-size: cover;
+}
+
+#img2-3 {
+    background: url("data/jaguar.jpg");
+    background-size: cover;
+}
+
+#img2-4 {
+    background: url("data/nin64.jpg");
+    background-size: cover;
+}
+
+
+/*slide three images*/
+
+#img3-1 {
+    background: url("data/wahoo.jpg");
+    background-size: cover;
+}
+
+#img3-2 {
+    background: url("data/sailfish.jpg");
+    background-size: cover;
+}
+
+#img3-3 {
+    background: url("data/tuna.jpg");
+    background-size: cover;
+}
+
+#img3-4 {
+    background: url("data/shark.jpg");
+    background-size: cover;
+}
+
+
+/*slide four images*/
+
+#img4-1 {
+    background: url("data/shibe.jpg");
+    background-size: cover;
+}
+
+#img4-2 {
+    background: url("data/bob.jpg");
+    background-size: cover;
+}
+
+#img4-3 {
+    background: url("data/javanese.jpg");
+    background-size: cover;
+}
+
+#img4-4 {
+    background: url("data/akita.jpg");
+    background-size: cover;
+}
+
+
+/*slide five images*/
+
+#img5-1 {
+    background: url("data/aus.jpg");
+    background-size: cover;
+}
+
+#img5-2 {
+    background: url("data/iceland.jpg");
+    background-size: cover;
+}
+
+#img5-3 {
+    background: url("data/us.jpg");
+    background-size: cover;
+}
+
+#img5-4 {
+    background: url("data/scotland.jpg");
+    background-size: cover;
+}
+
+.flow:hover,
+.flow2:hover,
+.flow3:hover,
+.flow4:hover,
+.flow5:hover {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.selected {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 5px none #36D9D1;
+    border-left-style: solid;
+    border-right-style: solid;
+}
+
+#div2,
+#div3,
+#div4,
+#div5,
+#div6{
+    display: none;
+}
+
+#container {
+    height: 450px;
+    padding-top: 20px;
+}
+
