@@ -96,30 +96,56 @@ $(document).ready(function () {
 
                 if (control1 == "INFERNO COP") {
                     correct++
+                } else {
+                    $("#a1").html("Question one")
                 }
+                
                 if (control2 == "NINTENDO 64") {
                     correct++
+                } else {
+                    $("#a6").html("Question six")
                 }
+                
                 if (control3 == "SAILFISH") {
                     correct++
+                } else {
+                    $("#a3").html("Question three")
                 }
+                
                 if (control4 == "JAVANESE") {
                     correct++
+                } else {
+                    $("#a4").html("Question four")
                 }
+                
                 if (control5 == "AUSTRALIA") {
                     correct++
+                } else {
+                    $("#a5").html("Question five")
                 }
+                
                 var num = $("#numIn").val()
                 if (num == 2) {
                     correct++
+                } else {
+                    $("#a2").html("Question two")
                 }
+                
                 var text = $("#textIn").val()
                 text = text.toLowerCase()
                 if (text == "sunrise") {
                     correct++
-                } 
+                }  else {
+                    $("#a7").html("Question seven")
+                }
+                
+                if (correct < 7) {
+                    $("#place").html("Incorrect answers:")
+                }
                 
                 $("#score").html("You scored " + correct + "/7")
+                
+                
 
                 if (correct == 0) {
                     $("#status").html("Maybe you should try harder.")
@@ -142,7 +168,7 @@ $(document).ready(function () {
 
             $("#div" + slideNum).slideDown("slow")
             if (slideNum > 7) {
-                $("#slideIn").html("RESULTS")
+                $("#slideIn").hide()
             } else {
                 $("#slideIn").html(slideNum + "/7")
             }
