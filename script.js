@@ -73,6 +73,7 @@ $(document).ready(function () {
 
     //previous
     $("#prev").click(function () {
+        $(':input[type="prev"]').prop('disabled', true);
         $("#div" + slideNum).slideUp("slow", function () {
             slideNum--
 
@@ -82,14 +83,16 @@ $(document).ready(function () {
 
             $("#div" + slideNum).slideDown("slow")
             $("#slideIn").html(slideNum + "/7")
+            $(':input[type="prev"]').prop('disabled', false);
         })
     })
 
     //next
     $("#next").click(function () {
+        $(':input[type="next"]').prop('disabled', true);
+        $(':input[type="prev"]').prop('disabled', true);
         $("#div" + slideNum).slideUp("slow", function () {
             slideNum++
-
             if (slideNum > 7) { // RESULTS SCREEN
                 $("#prev").hide()
                 $("#next").hide()
@@ -167,11 +170,29 @@ $(document).ready(function () {
             }
 
             $("#div" + slideNum).slideDown("slow")
+            $(':input[type="next"]').prop('disabled', false);
+            $(':input[type="prev"]').prop('disabled', false);
             if (slideNum > 7) {
                 $("#slideIn").hide()
             } else {
                 $("#slideIn").html(slideNum + "/7")
             }
+            
+            $("#submit").click(function() {
+              $("#radio").slideUp("slow")
+              var area = $("input[name='selector']:checked").val()
+                console.log(area)
+                if (area=="bad") {
+                    $("#goob").html("Sucking at something is the first step to being kinda good at something.")
+                } else if (area=="ok") {
+                    $("#goob").html("It's okay to be normal, most people are.")
+                } else if (area=="good") {
+                    $("#goob").html("Are you setting your standards high enough?")
+                } else if (area=="jesus") {
+                    $("#goob").html("Thank you for your response.")
+                }
+                $("#goob").slideDown("slow")
+            })
 
         })
     })

@@ -104,19 +104,25 @@
             <p id="a6"></p>
             <p id="a7"></p>
 
-            <div class="container">
+            <br>
+
+            
+
+            <div id="radio" class="container">
+                
+                <h3>How do you think you did?</h3>
 
                 <ul>
                     <li>
-                        <input type="radio" id="f-option" name="selector">
-                        <label for="f-option">Pizza</label>
+                        <input type="radio" id="f-option" name="selector" value="bad">
+                        <label for="f-option">Not so hot.</label>
 
                         <div class="check"></div>
                     </li>
 
                     <li>
-                        <input type="radio" id="s-option" name="selector">
-                        <label for="s-option">Bacon</label>
+                        <input type="radio" id="a-option" name="selector" value="ok">
+                        <label for="a-option">OK, I guess.</label>
 
                         <div class="check">
                             <div class="inside"></div>
@@ -124,26 +130,37 @@
                     </li>
 
                     <li>
-                        <input type="radio" id="t-option" name="selector">
-                        <label for="t-option">Cats</label>
+                        <input type="radio" id="t-option" name="selector" value="good">
+                        <label for="t-option">Pretty good, thanks.</label>
+
+                        <div class="check">
+                            <div class="inside"></div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <input type="radio" id="y-option" name="selector" value="jesus">
+                        <label for="y-option">I might be Jesus.</label>
 
                         <div class="check">
                             <div class="inside"></div>
                         </div>
                     </li>
                 </ul>
+                <br>
+                <p><button id="submit">SUBMIT</button></p>
             </div>
-            <p><button id="submit">Submit</button></p>
 
+            <p id=goob></p>
 
         </div>
 
     </div>
 
     <p>
-        <button id="prev">PREV</button>
+        <button type="prev" id="prev">PREV</button>
         <label id="slideIn"></label>
-        <button id="next">NEXT</button>
+        <button type="next" id="next">NEXT</button>
     </p>
 
 

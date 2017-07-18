@@ -16,9 +16,9 @@ img {
 }
 
 input {
-    display: inline-block;
+    display: inline;
     align-items: center;
-    width: 750px;
+    width: 300px;
     margin-right: 40px;
     font-family: "Poiret One";
     font-size: 18px;
@@ -34,7 +34,7 @@ input:focus {
 
 .style-1 input {
     padding: 10px;
-    border: solid 1px #dcdcdc;
+    border: solid 1px #36D9D1;
     transition: box-shadow 0.3s, border 0.3s;
 }
 
@@ -48,7 +48,8 @@ input:focus {
     list-style: none;
     margin: 0;
     padding: 0;
-    overflow: auto;
+    margin-left: 400px;
+    overflow:auto;
 }
 
 ul li {
@@ -80,7 +81,7 @@ ul li label {
 }
 
 ul li:hover label {
-    color: #FFFFFF;
+    color: #36D9D1;
 }
 
 ul li .check {
@@ -116,15 +117,15 @@ ul li .check::before {
 }
 
 input[type=radio]:checked~.check {
-    border: 5px solid #0DFF92;
+    border: 5px solid #36D9D1;
 }
 
 input[type=radio]:checked~.check::before {
-    background: #0DFF92;
+    background: #36D9D1;
 }
 
 input[type=radio]:checked~label {
-    color: #0DFF92;
+    color: #36D9D1;
 }
 
 p {
@@ -326,7 +327,8 @@ button:hover {
 #div5,
 #div6,
 #div7,
-#div8 {
+#div8,
+#goob {
     display: none;
 }
 
